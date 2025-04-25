@@ -1,0 +1,19 @@
+INTRO: This application was written in 2021 and won't run directly on python 3.10.x. The build tools
+have change and some of the dependencies won't install. I recommend running as a docker container 
+running python 3.8.x, as I can't be sure that the dependencies can be updated without fixing the 
+vulnerabilities.
+PREREQUESITES: docker
+
+OPTION 1 PULL CONTAINER FROM DOCKER HUB:
+
+docker pull jbenjohnston/app-sec-challenge
+docker run jbenjohnston/app-sec-challenge
+
+OPTION 2 BUILD THE CONTAINER LOCALLY:
+
+cd {path of this repository's Dockerfile}
+docker build -t app-sec-challenge:latest .
+docker run app-sec-challenge:latest
+
+
+After docker run, Observe the output for a url. Enter this url in the browser
